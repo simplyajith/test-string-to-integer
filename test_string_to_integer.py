@@ -20,7 +20,7 @@ def test_valid_data(test_input, expected):
 
 
 @pytest.mark.parametrize("data", ["", "999.5", "3/4", "abc", "abc946", "$%^", "--667", "++-6567",
-								  None, (), {}, [], (1, 1), [55, ], {56: 77},"0b100","0xABC"])
+								  None, (), {}, [], (1, 1), [55, ], {56: 77},"0b100","0xABC","  "])
 def test_invalid_data(data):
 	assert string_to_int(data) is False
 
